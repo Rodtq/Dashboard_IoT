@@ -18,6 +18,8 @@ import QrCode2Icon from '@mui/icons-material/QrCode2';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { Grid, Paper } from '@mui/material';
+import { Breadcrumbs, Link } from '@mui/material';
 
 const drawerWidth = 240;
 
@@ -112,6 +114,7 @@ const Hamburguer = () => {
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar position="fixed" open={open}>
+
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -125,9 +128,29 @@ const Hamburguer = () => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" noWrap component="div">
-                        Taverna Board
-                    </Typography>
+                    <Grid content >
+                        <Grid item xs={12} >
+                            <Typography variant="h6" noWrap component="div" style={{textAlign: 'left'}}>
+                                Taverna Board
+                            </Typography>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography variant="h6" noWrap component="div">
+                                <Breadcrumbs aria-label="breadcrumb">
+                                    <Link underline="hover" color="inherit" href="/">
+                                        MUI
+                                    </Link>
+                                    <Link
+                                        underline="hover"
+                                        color="inherit"
+                                        href="/material-ui/getting-started/installation/">
+                                        Core
+                                    </Link>
+                                    <Typography color="text.primary">Breadcrumbs</Typography>
+                                </Breadcrumbs>
+                            </Typography>
+                        </Grid>
+                    </Grid>
                 </Toolbar>
             </AppBar>
             <Drawer variant="permanent" open={open}>
