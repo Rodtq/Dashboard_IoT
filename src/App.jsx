@@ -8,15 +8,12 @@ import Navigator from './components/Navigator';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
- 
-      </header>
-      <body>
+    <section className="App">
+      <div>
         <Navigator>
         </Navigator>
-      </body>
-    </div>
+      </div>
+    </section>
   );
 }
 
