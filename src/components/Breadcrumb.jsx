@@ -8,7 +8,7 @@ const Breadcrumb = () => {
     let location = useLocation();
     let pathnames = location.pathname.split('/').filter(x => x);
     return (
-        <Breadcrumbs>
+        <Breadcrumbs sx={{pl:"24px"}}>
             <Link key={0} to={'/'}>Home</Link>
             {
                 pathnames.map((pName, index = 1) => {

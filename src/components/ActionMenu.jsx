@@ -8,12 +8,17 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Link } from 'react-router-dom';
 
+const linkStyle = {
+    margin: "0px",
+    textDecoration: "none",
+    display: "flex",
+    justifyContent: 'center', alignItems: 'center', width: '..', height: '..',
+  };
 const actions = [
-    { icon: <Link to="/addPage"><AddIcon ></AddIcon></Link>, name: 'Add' },
-    { icon: <Link to="/delPage"><RemoveIcon /></Link>, name: 'Remove' },
+    { icon: <Link style={linkStyle} to="/addPage"><AddIcon  sx={{m:"0px"}}></AddIcon></Link>, name: 'Add' },
+    { icon: <Link style={linkStyle} to="/delPage"><RemoveIcon /></Link>, name: 'Remove' },
 
 ];
-
 const ActionMenu = () => {
     return (
         <Container  >

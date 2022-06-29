@@ -9,10 +9,10 @@ import Navigator from './components/Navigator';
 function App() {
   return (
     <section className="App">
-      <div>
+      <header>
         <Navigator>
         </Navigator>
-      </div>
+      </header>
     </section>
   );
 }
