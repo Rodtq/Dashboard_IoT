@@ -15,8 +15,8 @@ const linkStyle = {
     justifyContent: 'center', alignItems: 'center', width: '..', height: '..',
   };
 const actions = [
-    { icon: <Link style={linkStyle} to="/addPage"><AddIcon  sx={{m:"0px"}}></AddIcon></Link>, name: 'Add' },
-    { icon: <Link style={linkStyle} to="/delPage"><RemoveIcon /></Link>, name: 'Remove' },
+    { icon: <Link style={linkStyle} to="/Add"><AddIcon  sx={{m:"0px"}}></AddIcon></Link>, name: 'Add' },
+    { icon: <Link style={linkStyle} to="/Remove"><RemoveIcon /></Link>, name: 'Remove' },
 
 ];
 const ActionMenu = () => {

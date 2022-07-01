@@ -8,9 +8,10 @@ import AddPage from '../pages/AddPage';
 import DelPage from '../pages/DelPage';
 import Home from '../pages/Home';
 import Page404 from '../pages/Page404';
+import LoginPage from '../pages/LoginPage';
+
 
 const Navigator = () => {
-
     const sideBarRef = useRef();
     const menuHandler = () => {
         console.log("oi");
@@ -18,21 +19,23 @@ const Navigator = () => {
             sideBarRef.current.openDrawer();
         }
     }
+
     return (
         <BrowserRouter>
             <Header onBtnClick={menuHandler} ></Header>
-            <SideBar ref={sideBarRef}></SideBar>
+            <SideBar ref={sideBarRef} ></SideBar>
             <Box
-             sx={{ml:"5%", mt:"2rem", mr:"5%",mb:"2rem"}}>
+                sx={{ ml: "5%", mr: "5%", mt: "2rem", mb: "2rem"  }} display="flex" justifyContent="center">
                 <Routes>
+                    <Route exact path="/Login" element={<LoginPage></LoginPage>}></Route>
                     <Route exact path="/" element={<Home />} />
-                    <Route path="addPage" element={<AddPage ></AddPage>} />
-                    <Route path="delPage" element={<DelPage></DelPage>} />
-                    <Route path="*" element={<Page404></Page404>} />
+                    <Route exact path="Add" element={<AddPage ></AddPage>} />
+                    <Route exact path="Remove" element={<DelPage></DelPage>} />
+                    <Route exact path="*" element={<Page404></Page404>} />
                 </Routes>
             </Box>
             <ActionMenu></ActionMenu>
         </BrowserRouter>
-    );
+    )
 }
 export default Navigator
